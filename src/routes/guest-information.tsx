@@ -28,20 +28,20 @@ export const Route = createFileRoute("/guest-information")({
 });
 
 const CARDS = [
-  { icon: BedDouble, title: "Accommodation", body: "Placeholder — a list of recommended guest houses near Choba will be shared here." },
-  { icon: Bus, title: "Transportation", body: "Placeholder — shuttle pick-up points and timings for out-of-town guests." },
-  { icon: CarFront, title: "Parking", body: "Placeholder — secured parking is available within the venue premises." },
-  { icon: Hotel, title: "Nearby Hotels", body: "Placeholder — Helena Hotels and other nearby options within five minutes of the venue." },
-  { icon: CloudSun, title: "Weather", body: "Placeholder — late August in Port Harcourt is warm and humid with occasional rain. A light umbrella is wise." },
-  { icon: PhoneCall, title: "Contact", body: `Placeholder — reach our planning team on ${WEDDING.phones[0]} for any questions.` },
+  { icon: BedDouble, title: "Accommodation", body: "A list of recommended guest houses near Choba will be shared here." },
+  { icon: Bus, title: "Transportation", body: "Guests are kindly requested to make their own transportation arrangements to and from the venue, as no shuttle or transportation service will be provided." },
+  { icon: CarFront, title: "Parking", body: "Secured parking is available within the venue premises." },
+  { icon: Hotel, title: "Nearby Hotels", body: "Helena Hotels and other nearby options within five minutes of the venue." },
+  { icon: CloudSun, title: "Weather", body: "Late August in Port Harcourt is warm and humid with occasional rain. A light umbrella is wise." },
+  { icon: PhoneCall, title: "Contact", body: `Please reach our planning team on ${WEDDING.phones[0]} for any questions.` },
 ];
 
 const FAQS = [
-  { q: "What time should I arrive?", a: "Placeholder — please arrive by 9:30 AM. The ceremony begins at 10:00 AM prompt." },
-  { q: "Can I bring a guest?", a: "Placeholder — kindly indicate the number of guests on your RSVP so we can reserve seats." },
-  { q: "Are children welcome?", a: "Placeholder — yes, children are welcome. Please supervise them during the ceremony." },
-  { q: "Is there a dress code?", a: "Placeholder — formal attire in our colours: turquoise, royal blue, leaf green, gold or white." },
-  { q: "Where do I park?", a: "Placeholder — parking is available at the venue with attendants on hand to direct you." },
+  { q: "What time should I arrive?", a: "Please arrive by 9:30 AM. The ceremony begins at 10:00 AM prompt." },
+  { q: "Can I bring a guest?", a: "Kindly indicate the number of guests on your RSVP so we can reserve seats." },
+  { q: "Are children welcome?", a: "Yes, children are welcome. Please supervise them diligently during the ceremony." },
+  { q: "Is there a dress code?", a: "Formal attire in our colours: turquoise, royal blue, leaf green, gold or white." },
+  { q: "Where do I park?", a: "Parking is available at the venue with attendants on hand to direct you." },
 ];
 
 function GuestInfo() {
@@ -50,7 +50,7 @@ function GuestInfo() {
       <PageHero
         eyebrow="Guest Information"
         title="Everything you need to know"
-        intro="Practical details to make your visit smooth and joyful. All content below is placeholder text."
+        intro="Practical details to make your visit smooth and joyful."
       />
 
       <section className="px-4 py-20">
