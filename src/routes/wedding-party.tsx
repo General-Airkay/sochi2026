@@ -32,38 +32,38 @@ const GROUPS: { heading: string; note: string; people: Person[] }[] = [
   },
   {
     heading: "Standing Closest",
-    note: "Placeholder names — replace with your chosen party.",
+    note: "Our esteemed choice party.",
     people: [
-      { name: "Name Placeholder", role: "Chief Bridesmaid" },
-      { name: "Name Placeholder", role: "Best Man" },
+      { name: "Nkechi Biodun", role: "Chief Bridesmaid" },
+      { name: "David Adewole", role: "Best Man" },
     ],
   },
   {
     heading: "Bridesmaids",
     note: "Placeholder names.",
     people: [
-      { name: "Name Placeholder", role: "Bridesmaid" },
-      { name: "Name Placeholder", role: "Bridesmaid" },
-      { name: "Name Placeholder", role: "Bridesmaid" },
-      { name: "Name Placeholder", role: "Bridesmaid" },
+      { name: "Patience Nathaniel", role: "Bridesmaid" },
+      { name: "Patience Nathaniel", role: "Bridesmaid" },
+      { name: "Patience Nathaniel", role: "Bridesmaid" },
+      { name: "Patience Nathaniel", role: "Bridesmaid" },
     ],
   },
   {
     heading: "Groomsmen",
     note: "Placeholder names.",
     people: [
-      { name: "Name Placeholder", role: "Groomsman" },
-      { name: "Name Placeholder", role: "Groomsman" },
-      { name: "Name Placeholder", role: "Groomsman" },
-      { name: "Name Placeholder", role: "Groomsman" },
+      { name: "Johnson Vincent", role: "Groomsman" },
+      { name: "Johnson Vincent", role: "Groomsman" },
+      { name: "Johnson Vincent", role: "Groomsman" },
+      { name: "Johnson Vincent", role: "Groomsman" },
     ],
   },
   {
     heading: "Our Parents",
     note: "With gratitude for their love and prayers.",
     people: [
-      { name: "Mr. & Mrs. Placeholder", role: "Parents of the Bride" },
-      { name: "Mr. & Mrs. Placeholder", role: "Parents of the Groom" },
+      { name: "Mr. & Mrs. Sotonye", role: "Parents of the Bride" },
+      { name: "Mr. & Mrs. Godbless", role: "Parents of the Groom" },
     ],
   },
 ];
