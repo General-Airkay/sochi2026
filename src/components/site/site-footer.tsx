@@ -30,11 +30,19 @@ export function SiteFooter() {
         </ul>
 
         <p className="mt-8 text-xs text-ivory/60">
-          {WEDDING.bride} &amp; {WEDDING.groom} · {WEDDING.dateLabel}
+          {WEDDING.dateLabel}
         </p>
         <p className="mt-2 text-xs text-ivory/50">
-          Copyright © 2026 {WEDDING.hashtag}. Made with love.
-        </p>
+  Copyright © 2026 {WEDDING.hashtag}. Made with love by{" "}
+  <a
+    href="https://myweddingwebsite.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-semibold text-amber-300 hover:text-amber-200 underline underline-offset-2 transition-colors"
+  >
+    HTS Digital
+  </a>
+</p>
       </div>
     </footer>
   );
