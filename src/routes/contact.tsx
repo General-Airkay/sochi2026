@@ -5,7 +5,8 @@ import { Ornament, SectionHeading } from "@/components/site/ornaments";
 import { WEDDING } from "@/lib/wedding";
 
 const TITLE = "Contact — SoChi2026";
-const DESC = "RSVP phone numbers, WhatsApp, email and social links for the wedding of Queeneth and Chigozie.";
+const DESC =
+  "RSVP phone numbers, WhatsApp, email and social links for the wedding of Queeneth and Chigozie.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -23,7 +24,9 @@ export const Route = createFileRoute("/contact")({
 
 function waLink(phone: string) {
   const intl = `234${phone.replace(/^0/, "")}`;
-  return `https://wa.me/${intl}?text=${encodeURIComponent("Hello! I have a question about SoChi2026.")}`;
+  return `https://wa.me/${intl}?text=${encodeURIComponent(
+    "Hello! I have a question about SoChi2026."
+  )}`;
 }
 
 function Contact() {
@@ -70,7 +73,7 @@ function Contact() {
             <Mail className="h-6 w-6 text-accent" aria-hidden="true" />
             <h2 className="mt-4 font-serif text-2xl">Email</h2>
             <div className="gold-rule mt-3 w-16" />
-            <p className="mt-4 text-sm text-muted-foreground">send us an email/p>
+            <p className="mt-4 text-sm text-muted-foreground">Send us an email</p>
             <a
               href={`mailto:${WEDDING.email}`}
               className="mt-3 inline-block border-b border-accent pb-1 text-sm text-accent"
@@ -83,7 +86,7 @@ function Contact() {
             <h2 className="font-serif text-2xl">Follow the celebration</h2>
             <div className="gold-rule mt-3 w-16" />
             <p className="mt-4 text-sm text-muted-foreground">
-              Pleasw share your photos with #{WEDDING.hashtag}.
+              Please share your photos with #{WEDDING.hashtag}
             </p>
             <div className="mt-5 flex gap-3">
               <a
