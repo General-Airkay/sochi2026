@@ -31,7 +31,7 @@ const CHAPTERS = [
     image: gallery3,
     w: 1280,
     h: 960,
-    body: "Placeholder text — replace with your own words. Our paths crossed on an ordinary afternoon that turned out to be anything but ordinary. A shared laugh, a long conversation, and a friendship that quietly began to feel like home.",
+    body: "Our paths crossed on an ordinary afternoon that turned out to be anything but ordinary. A shared laugh, a long conversation, and a friendship that quietly began to feel like home.",
   },
   {
     eyebrow: "Chapter Two",
@@ -39,7 +39,7 @@ const CHAPTERS = [
     image: gallery4,
     w: 1024,
     h: 1280,
-    body: "Placeholder text — replace with your own words. Under soft golden light, with hearts pounding and a ring hidden away, one question changed everything. She said yes, and heaven felt a little closer that evening.",
+    body: "Under soft golden light, with hearts pounding and a ring hidden away, one question changed everything. She said yes, and heaven felt a little closer that evening.",
   },
   {
     eyebrow: "Chapter Three",
@@ -47,7 +47,7 @@ const CHAPTERS = [
     image: gallery1,
     w: 1024,
     h: 1280,
-    body: "Placeholder text — replace with your own words. Through seasons of growth, prayer and laughter, we learned to choose each other daily. Every mile of the journey has taught us grace, patience and a deeper kind of love.",
+    body: "Through seasons of growth, prayer and laughter, we learned to choose each other daily. Every mile of the journey has taught us grace, patience and a deeper kind of love.",
   },
   {
     eyebrow: "Chapter Four",
@@ -55,7 +55,7 @@ const CHAPTERS = [
     image: gallery2,
     w: 1024,
     h: 1024,
-    body: "Placeholder text — replace with your own words. We look ahead with joy to a home built on faith, a family rooted in love, and a lifetime of ordinary days made beautiful because we get to share them.",
+    body: "We look ahead with joy to a home built on faith, a family rooted in love, and a lifetime of ordinary days made beautiful because we get to share them.",
   },
 ];
 
@@ -65,7 +65,7 @@ function OurStory() {
       <PageHero
         eyebrow="Our Story"
         title="A love written in God's time"
-        intro="Four chapters of a story still being written. All text below is placeholder copy you can replace at any time."
+        intro="Four chapters of a story still being written."
       />
 
       <div className="px-4 py-20">
