@@ -66,7 +66,7 @@ function Rsvp() {
       <PageHero
         eyebrow="RSVP"
         title="Will you celebrate with us?"
-        intro="Kindly respond on or before 1 August 2026 so we can prepare a seat for you."
+        intro="Kindly respond on or before 15th August 2026 so we can prepare a seat for you."
       />
 
       <section className="px-4 py-20">
