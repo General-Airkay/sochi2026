@@ -70,7 +70,7 @@ function Contact() {
             <Mail className="h-6 w-6 text-accent" aria-hidden="true" />
             <h2 className="mt-4 font-serif text-2xl">Email</h2>
             <div className="gold-rule mt-3 w-16" />
-            <p className="mt-4 text-sm text-muted-foreground">Placeholder address — update anytime.</p>
+            <p className="mt-4 text-sm text-muted-foreground">send us an email/p>
             <a
               href={`mailto:${WEDDING.email}`}
               className="mt-3 inline-block border-b border-accent pb-1 text-sm text-accent"
@@ -83,7 +83,7 @@ function Contact() {
             <h2 className="font-serif text-2xl">Follow the celebration</h2>
             <div className="gold-rule mt-3 w-16" />
             <p className="mt-4 text-sm text-muted-foreground">
-              Placeholder handles — share your photos with #{WEDDING.hashtag}.
+              Pleasw share your photos with #{WEDDING.hashtag}.
             </p>
             <div className="mt-5 flex gap-3">
               <a
