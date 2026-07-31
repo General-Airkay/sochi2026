@@ -1,4 +1,4 @@
-import divider from "@/assets/floral-divider.jpg";
+import divider from "@/assets/floral-divider.png";
 
 export function Ornament({ className = "" }: { className?: string }) {
   return (
