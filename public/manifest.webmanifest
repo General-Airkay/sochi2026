@@ -1,0 +1,16 @@
+{
+  "name": "SoChi2026 — Queeneth & Chigozie",
+  "short_name": "SoChi2026",
+  "description": "The wedding of Queeneth Sotonye and Chigozie Godbless, 29 August 2026.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D2D7A",
+  "theme_color": "#0D2D7A",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
