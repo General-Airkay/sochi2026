@@ -24,27 +24,27 @@ const GIFTS = [
   {
     icon: Banknote,
     title: "Bank Transfer",
-    body: "Placeholder — Bank Name, Account Name: Queeneth & Chigozie, Account Number: 0000000000.",
+    body: "Bank Name: Zenith Bank, Account Name: Queeneth & Chigozie, Account Number: 3067876566.",
   },
   {
     icon: Gift,
     title: "Wishlist",
-    body: "Placeholder — a curated online wishlist link will be shared here closer to the day.",
+    body: "A curated online wishlist link will be shared here closer to the day.",
   },
   {
     icon: Heart,
     title: "Cash Gift",
-    body: "Placeholder — a gift box will be available at the reception for those who prefer to give in person.",
+    body: "A gift box will be available at the reception for those who prefer to give in person.",
   },
   {
     icon: Home,
     title: "Household Gifts",
-    body: "Placeholder — items for our new home: kitchenware, linens, appliances and dining pieces.",
+    body: "Items for our new home: kitchenware, linens, appliances and dining pieces.",
   },
   {
     icon: HandHeart,
     title: "Prayer Support",
-    body: "Placeholder — above all, your prayers over our marriage are the gift we treasure most.",
+    body: "Above all, your prayers over our marriage are the gift we treasure most.",
   },
 ];
 
@@ -54,7 +54,7 @@ function Gifts() {
       <PageHero
         eyebrow="Gifts"
         title="Your presence is the present"
-        intro="Should you wish to bless our new home, here are a few gentle options. All details below are placeholders."
+        intro="Should you wish to bless our new home, here are a few gentle options."
       />
 
       <section className="px-4 py-20">
