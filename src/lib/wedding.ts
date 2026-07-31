@@ -10,7 +10,7 @@ export const WEDDING = {
   iso: "2026-08-29T10:00:00+01:00",
   verse: "For in the fullness of time, love blossomed into God's perfect plan.",
   phones: ["08130471871", "08133395447", "08100980650", "08101357112"],
-  email: "hello@sochi2026.com",
+  email: "nworgu@gmail.com",
 } as const;
 
 export const NAV_LINKS = [
