@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DressCodeRouteImport } from './routes/dress-code'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as GiftsRouteImport } from './routes/gifts'
+import { Route as GuestInformationRouteImport } from './routes/guest-information'
+import { Route as MessagesRouteImport } from './routes/messages'
+import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as ProgrammeRouteImport } from './routes/programme'
+import { Route as RsvpRouteImport } from './routes/rsvp'
+import { Route as WeddingDetailsRouteImport } from './routes/wedding-details'
+import { Route as WeddingPartyRouteImport } from './routes/wedding-party'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DressCodeRoute = DressCodeRouteImport.update({
+  id: '/dress-code',
+  path: '/dress-code',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GiftsRoute = GiftsRouteImport.update({
+  id: '/gifts',
+  path: '/gifts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuestInformationRoute = GuestInformationRouteImport.update({
+  id: '/guest-information',
+  path: '/guest-information',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MessagesRoute = MessagesRouteImport.update({
+  id: '/messages',
+  path: '/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurStoryRoute = OurStoryRouteImport.update({
+  id: '/our-story',
+  path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgrammeRoute = ProgrammeRouteImport.update({
+  id: '/programme',
+  path: '/programme',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RsvpRoute = RsvpRouteImport.update({
+  id: '/rsvp',
+  path: '/rsvp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeddingDetailsRoute = WeddingDetailsRouteImport.update({
+  id: '/wedding-details',
+  path: '/wedding-details',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeddingPartyRoute = WeddingPartyRouteImport.update({
+  id: '/wedding-party',
+  path: '/wedding-party',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/dress-code': typeof DressCodeRoute
+  '/gallery': typeof GalleryRoute
+  '/gifts': typeof GiftsRoute
+  '/guest-information': typeof GuestInformationRoute
+  '/messages': typeof MessagesRoute
+  '/our-story': typeof OurStoryRoute
+  '/programme': typeof ProgrammeRoute
+  '/rsvp': typeof RsvpRoute
+  '/wedding-details': typeof WeddingDetailsRoute
+  '/wedding-party': typeof WeddingPartyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/dress-code': typeof DressCodeRoute
+  '/gallery': typeof GalleryRoute
+  '/gifts': typeof GiftsRoute
+  '/guest-information': typeof GuestInformationRoute
+  '/messages': typeof MessagesRoute
+  '/our-story': typeof OurStoryRoute
+  '/programme': typeof ProgrammeRoute
+  '/rsvp': typeof RsvpRoute
+  '/wedding-details': typeof WeddingDetailsRoute
+  '/wedding-party': typeof WeddingPartyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/dress-code': typeof DressCodeRoute
+  '/gallery': typeof GalleryRoute
+  '/gifts': typeof GiftsRoute
+  '/guest-information': typeof GuestInformationRoute
+  '/messages': typeof MessagesRoute
+  '/our-story': typeof OurStoryRoute
+  '/programme': typeof ProgrammeRoute
+  '/rsvp': typeof RsvpRoute
+  '/wedding-details': typeof WeddingDetailsRoute
+  '/wedding-party': typeof WeddingPartyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/dress-code'
+    | '/gallery'
+    | '/gifts'
+    | '/guest-information'
+    | '/messages'
+    | '/our-story'
+    | '/programme'
+    | '/rsvp'
+    | '/wedding-details'
+    | '/wedding-party'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/dress-code'
+    | '/gallery'
+    | '/gifts'
+    | '/guest-information'
+    | '/messages'
+    | '/our-story'
+    | '/programme'
+    | '/rsvp'
+    | '/wedding-details'
+    | '/wedding-party'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/dress-code'
+    | '/gallery'
+    | '/gifts'
+    | '/guest-information'
+    | '/messages'
+    | '/our-story'
+    | '/programme'
+    | '/rsvp'
+    | '/wedding-details'
+    | '/wedding-party'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  DressCodeRoute: typeof DressCodeRoute
+  GalleryRoute: typeof GalleryRoute
+  GiftsRoute: typeof GiftsRoute
+  GuestInformationRoute: typeof GuestInformationRoute
+  MessagesRoute: typeof MessagesRoute
+  OurStoryRoute: typeof OurStoryRoute
+  ProgrammeRoute: typeof ProgrammeRoute
+  RsvpRoute: typeof RsvpRoute
+  WeddingDetailsRoute: typeof WeddingDetailsRoute
+  WeddingPartyRoute: typeof WeddingPartyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +195,100 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dress-code': {
+      id: '/dress-code'
+      path: '/dress-code'
+      fullPath: '/dress-code'
+      preLoaderRoute: typeof DressCodeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gifts': {
+      id: '/gifts'
+      path: '/gifts'
+      fullPath: '/gifts'
+      preLoaderRoute: typeof GiftsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guest-information': {
+      id: '/guest-information'
+      path: '/guest-information'
+      fullPath: '/guest-information'
+      preLoaderRoute: typeof GuestInformationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/messages': {
+      id: '/messages'
+      path: '/messages'
+      fullPath: '/messages'
+      preLoaderRoute: typeof MessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-story': {
+      id: '/our-story'
+      path: '/our-story'
+      fullPath: '/our-story'
+      preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programme': {
+      id: '/programme'
+      path: '/programme'
+      fullPath: '/programme'
+      preLoaderRoute: typeof ProgrammeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rsvp': {
+      id: '/rsvp'
+      path: '/rsvp'
+      fullPath: '/rsvp'
+      preLoaderRoute: typeof RsvpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wedding-details': {
+      id: '/wedding-details'
+      path: '/wedding-details'
+      fullPath: '/wedding-details'
+      preLoaderRoute: typeof WeddingDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wedding-party': {
+      id: '/wedding-party'
+      path: '/wedding-party'
+      fullPath: '/wedding-party'
+      preLoaderRoute: typeof WeddingPartyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  DressCodeRoute: DressCodeRoute,
+  GalleryRoute: GalleryRoute,
+  GiftsRoute: GiftsRoute,
+  GuestInformationRoute: GuestInformationRoute,
+  MessagesRoute: MessagesRoute,
+  OurStoryRoute: OurStoryRoute,
+  ProgrammeRoute: ProgrammeRoute,
+  RsvpRoute: RsvpRoute,
+  WeddingDetailsRoute: WeddingDetailsRoute,
+  WeddingPartyRoute: WeddingPartyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
