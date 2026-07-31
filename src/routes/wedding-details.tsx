@@ -22,30 +22,12 @@ export const Route = createFileRoute("/wedding-details")({
   component: Details,
 });
 
-const ICS = [
-  "BEGIN:VCALENDAR",
-  "VERSION:2.0",
-  "PRODID:-//SoChi2026//Wedding//EN",
-  "BEGIN:VEVENT",
-  "UID:sochi2026@wedding",
-  "DTSTART:20260829T090000Z",
-  "DTEND:20260829T160000Z",
-  "SUMMARY:SoChi2026 — Wedding of Queeneth & Chigozie",
-  "LOCATION:GIC Choba Satellite, Beside Helena Hotels, Choba, Port Harcourt",
-  "DESCRIPTION:Solemnization of Holy Matrimony",
-  "END:VEVENT",
-  "END:VCALENDAR",
-].join("\r\n");
-
-function downloadIcs() {
-  const blob = new Blob([ICS], { type: "text/calendar;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "sochi2026.ics";
-  a.click();
-  URL.revokeObjectURL(url);
-}
+const GOOGLE_CALENDAR_URL =
+  `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+  `&text=${encodeURIComponent("SoChi2026 — Wedding of Queeneth & Chigozie")}` +
+  `&dates=20260829T090000Z/20260829T160000Z` +
+  `&details=${encodeURIComponent("Solemnization of Holy Matrimony")}` +
+  `&location=${encodeURIComponent("GIC Choba Satellite, Beside Helena Hotels, Choba, Port Harcourt")}`;
 
 const MAP_QUERY = encodeURIComponent("GIC Choba Satellite, Choba, Port Harcourt");
 
@@ -116,7 +98,7 @@ function Details() {
               <Navigation className="h-5 w-5 text-accent" aria-hidden="true" />
               <h3 className="mt-3 font-serif text-2xl">Driving Directions</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Placeholder directions — from the East-West Road, turn towards Choba Satellite. The
+                From the East-West Road, turn towards Choba Satellite. The
                 venue is beside Helena Hotels, just before the police station. Signage in royal blue
                 and gold will guide you from the junction.
               </p>
@@ -136,13 +118,14 @@ function Details() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Add the ceremony to your calendar so you never miss a moment.
               </p>
-              <button
-                type="button"
-                onClick={downloadIcs}
-                className="mt-6 rounded-sm bg-gradient-to-r from-[oklch(0.66_0.11_76)] to-[oklch(0.84_0.08_84)] px-6 py-3 text-[0.68rem] uppercase tracking-[0.24em] text-accent-foreground transition-transform hover:scale-105"
-              >
-                Add to Calendar
-              </button>
+              <a
+  href={GOOGLE_CALENDAR_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 rounded-sm bg-gradient-to-r from-[oklch(0.66_0.11_76)] to-[oklch(0.84_0.08_84)] px-6 py-3 text-[0.68rem] uppercase tracking-[0.24em] text-accent-foreground transition-transform hover:scale-105"
+>
+  Add to Google Calendar
+</a>
             </article>
           </div>
         </div>
