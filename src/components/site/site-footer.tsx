@@ -33,7 +33,9 @@ export function SiteFooter() {
           {WEDDING.dateLabel}
         </p>
         <p className="mt-2 text-xs text-ivory/50">
-  Copyright © 2026 {WEDDING.hashtag}. Made with love by{" "}
+  Copyright © 2026 {WEDDING.hashtag}. 
+        </p>
+        <p Made with love by{" "}
   <a
     href="https://myweddingwebsite.vercel.app/"
     target="_blank"
