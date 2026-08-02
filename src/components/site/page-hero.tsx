@@ -1,4 +1,4 @@
-import { Countdown } from "@/components/site/countdown";
+import { MarriedFor } from "@/components/site/married-for";
 
 export function PageHero({
   eyebrow,
@@ -24,7 +24,7 @@ export function PageHero({
           <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-ivory/80">{intro}</p>
         ) : null}
         <div className="mt-8">
-          <Countdown compact />
+          <MarriedFor compact />
         </div>
       </div>
     </header>

@@ -12,7 +12,10 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-3xl">
         <p className="font-script text-4xl shimmer-gold">{WEDDING.hashtag}</p>
         <p className="mx-auto mt-4 max-w-lg font-serif text-lg italic leading-relaxed text-ivory/90">
-          “{WEDDING.verse}”
+          “Thank you for being part of our love story.”
+        </p>
+        <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-ivory/75">
+          Our hearts are full because of your love, prayers and support.
         </p>
         <div className="gold-rule mx-auto mt-8 w-40" />
 
@@ -30,7 +33,7 @@ export function SiteFooter() {
         </ul>
 
         <p className="mt-8 text-xs text-ivory/60">
-          {WEDDING.dateLabel}
+          Married {WEDDING.dateLabel} · {WEDDING.city}
         </p>
         <p className="mt-2 text-xs text-ivory/50">
           Copyright © 2026 {WEDDING.hashtag}.
