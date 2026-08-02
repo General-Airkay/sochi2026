@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap",
       },
     ],
-    scripts: [
+        scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
@@ -110,6 +110,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           startDate: "2026-08-29T10:00:00+01:00",
           eventStatus: "https://schema.org/EventScheduled",
           eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          description:
+            "Wedding memories and appreciation website for Queeneth Sotonye and Chigozie Godbless.",
           location: {
             "@type": "Place",
             name: "GIC Choba Satellite",
@@ -118,6 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         }),
       },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,
