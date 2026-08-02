@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import gallery1 from "@/assets/gallery-1.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
+import galleryTrad from "@/assets/gallery-trad.jpg";
+import galleryWhite from "@/assets/gallery-white.jpg";
+import galleryReception from "@/assets/gallery-reception.jpg";
 import { PageHero } from "@/components/site/page-hero";
-import { Ornament } from "@/components/site/ornaments";
+import { Ornament, SectionHeading } from "@/components/site/ornaments";
 
-const TITLE = "Our Story — SoChi2026";
+const TITLE = "Our Story — SoChi2026 Wedding Memories";
 const DESC =
-  "How Queeneth and Chigozie met, the proposal, their journey together and what they are looking forward to.";
+  "The journey of Queeneth and Chigozie: from yes to I do, the wedding day, and the new chapter that has begun.";
 
 export const Route = createFileRoute("/our-story")({
   head: () => ({
@@ -27,35 +27,35 @@ export const Route = createFileRoute("/our-story")({
 const CHAPTERS = [
   {
     eyebrow: "Chapter One",
-    title: "How We Met",
-    image: gallery3,
-    w: 1280,
-    h: 960,
-    body: "Our paths crossed on an ordinary afternoon that turned out to be anything but ordinary. A shared laugh, a long conversation, and a friendship that quietly began to feel like home.",
-  },
-  {
-    eyebrow: "Chapter Two",
-    title: "The Proposal",
-    image: gallery4,
-    w: 1024,
-    h: 1280,
-    body: "Under soft golden light, with hearts pounding and a ring hidden away, one question changed everything. She said yes, and heaven felt a little closer that evening.",
-  },
-  {
-    eyebrow: "Chapter Three",
-    title: "Our Journey",
+    title: "Our Journey Together",
     image: gallery1,
     w: 1024,
     h: 1280,
-    body: "Through seasons of growth, prayer and laughter, we learned to choose each other daily. Every mile of the journey has taught us grace, patience and a deeper kind of love.",
+    body: "It began with an ordinary hello that quietly became home. Through seasons of growth, prayer and laughter, we learned to choose each other daily — and every step brought us closer to the altar.",
+  },
+  {
+    eyebrow: "Chapter Two",
+    title: 'From "Yes" to "I Do"',
+    image: galleryTrad,
+    w: 1024,
+    h: 1280,
+    body: "From the evening she said yes, to the traditional rites where two families became one, the months that followed were full of planning, prayer and joyful anticipation. Every detail was touched by love.",
+  },
+  {
+    eyebrow: "Chapter Three",
+    title: "The Wedding Day",
+    image: galleryWhite,
+    w: 1280,
+    h: 960,
+    body: "On 29 August 2026, surrounded by family and friends, we stood before God and made our vows. The music, the tears, the applause — it was everything we prayed for and so much more.",
   },
   {
     eyebrow: "Chapter Four",
-    title: "Looking Forward",
-    image: gallery2,
-    w: 1024,
-    h: 1024,
-    body: "We look ahead with joy to a home built on faith, a family rooted in love, and a lifetime of ordinary days made beautiful because we get to share them.",
+    title: "A New Chapter Begins",
+    image: galleryReception,
+    w: 1280,
+    h: 960,
+    body: "Now the celebration settles into everyday life: a home built on faith, shared mornings, quiet evenings and a lifetime of ordinary days made beautiful because we get to share them.",
   },
 ];
 
@@ -65,7 +65,7 @@ function OurStory() {
       <PageHero
         eyebrow="Our Story"
         title="A love written in God's time"
-        intro="Four chapters of a story still being written."
+        intro="Four chapters that led us to I do — and the beautiful new one that has just begun."
       />
 
       <div className="px-4 py-20">
@@ -97,6 +97,25 @@ function OurStory() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <Ornament className="mb-12" />
+          <SectionHeading
+            eyebrow="Appreciation"
+            title="We did not walk this road alone"
+            subtitle="To our parents, siblings, friends, mentors, church family and every helper along the way — thank you. You prayed, gave, planned, travelled and rejoiced with us. This story is yours too."
+          />
+          <div className="mx-auto mt-12 max-w-3xl luxe-card p-8 text-center">
+            <p className="font-serif text-lg italic leading-relaxed text-muted-foreground">
+              “Thank you for every prayer whispered, every gift given, every mile travelled and
+              every kind word spoken over our marriage. We carry your love with us into forever.”
+            </p>
+            <div className="gold-rule mx-auto mt-6 w-24" />
+            <p className="mt-4 text-xs uppercase tracking-[0.24em] text-accent">
+              Queeneth &amp; Chigozie
+            </p>
+          </div>
         </div>
       </div>
     </>
