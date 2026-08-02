@@ -17,6 +17,7 @@ import { Petals } from "@/components/site/petals";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { ScrollToTop } from "@/components/site/scroll-to-top";
+import { PasswordGate } from "@/components/site/password-gate";
 
 function NotFoundComponent() {
   return (
@@ -147,15 +148,17 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <LoadingVeil />
-      <Petals />
-      <SiteHeader />
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <main className="relative z-10">
-        <Outlet />
-      </main>
-      <SiteFooter />
-      <ScrollToTop />
+      <PasswordGate>
+        <LoadingVeil />
+        <Petals />
+        <SiteHeader />
+        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+        <main className="relative z-10">
+          <Outlet />
+        </main>
+        <SiteFooter />
+        <ScrollToTop />
+      </PasswordGate>
       <Toaster />
     </QueryClientProvider>
   );
