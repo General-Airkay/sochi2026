@@ -6,11 +6,16 @@ import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
+import gCourt from "@/assets/gallery-court.jpg";
+import gTrad from "@/assets/gallery-trad.jpg";
+import gWhite from "@/assets/gallery-white.jpg";
+import gReception from "@/assets/gallery-reception.jpg";
 import { PageHero } from "@/components/site/page-hero";
 import { Ornament } from "@/components/site/ornaments";
 
-const TITLE = "Gallery — SoChi2026";
-const DESC = "Engagement, traditional, pre-wedding, romantic and family moments of Queeneth and Chigozie.";
+const TITLE = "Our Wedding Gallery — SoChi2026 Digital Album";
+const DESC =
+  "A premium digital wedding album: pre-wedding, court registry, traditional engagement and white wedding photographs of Queeneth and Chigozie.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -27,17 +32,18 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const PHOTOS = [
-  { src: g1, alt: "Engagement portrait at golden hour", category: "Engagement", w: 1024, h: 1280 },
-  { src: g2, alt: "Traditional attire portrait", category: "Traditional", w: 1024, h: 1024 },
-  { src: g3, alt: "Pre-wedding walk along a palm lined path", category: "Pre-wedding", w: 1280, h: 960 },
-  { src: g4, alt: "A romantic moment together", category: "Romantic moments", w: 1024, h: 1280 },
-  { src: g5, alt: "Family and friends at a celebration", category: "Family", w: 1280, h: 960 },
-  { src: g1, alt: "Engagement portrait, second look", category: "Engagement", w: 1024, h: 1280 },
-  { src: g3, alt: "Pre-wedding session outdoors", category: "Pre-wedding", w: 1280, h: 960 },
-  { src: g4, alt: "Laughter shared between the couple", category: "Romantic moments", w: 1024, h: 1280 },
+  { src: g1, alt: "Pre-wedding portrait at golden hour", category: "Pre-Wedding", w: 1024, h: 1280 },
+  { src: g3, alt: "Pre-wedding walk along a palm lined path", category: "Pre-Wedding", w: 1280, h: 960 },
+  { src: g4, alt: "A romantic pre-wedding moment together", category: "Pre-Wedding", w: 1024, h: 1280 },
+  { src: gCourt, alt: "Signing the marriage register at the registry", category: "Court / Registry", w: 1024, h: 1280 },
+  { src: g2, alt: "Portrait after the registry ceremony", category: "Court / Registry", w: 1024, h: 1024 },
+  { src: gTrad, alt: "Traditional engagement in royal blue and gold attire", category: "Traditional / Engagement", w: 1024, h: 1280 },
+  { src: g5, alt: "Family and friends at the traditional celebration", category: "Traditional / Engagement", w: 1280, h: 960 },
+  { src: gWhite, alt: "The couple at the altar during the white wedding", category: "White Wedding", w: 1280, h: 960 },
+  { src: gReception, alt: "First dance at the wedding reception", category: "White Wedding", w: 1280, h: 960 },
 ];
 
-const FILTERS = ["All", "Engagement", "Traditional", "Pre-wedding", "Romantic moments", "Family"];
+const FILTERS = ["All", "Pre-Wedding", "Court / Registry", "Traditional / Engagement", "White Wedding"];
 
 function Gallery() {
   const [filter, setFilter] = useState("All");
@@ -49,22 +55,30 @@ function Gallery() {
     <>
       <PageHero
         eyebrow="Gallery"
-        title="Moments we hold dear"
-        intro="A collection of our favourite frames — engagement, traditional, pre-wedding and family."
+        title="Our digital wedding album"
+        intro="Every stage of the journey — pre-wedding, registry, traditional and the white wedding."
       />
 
       <section className="px-4 py-20">
         <Ornament className="mb-10" />
 
-        <div className="mx-auto mb-10 flex max-w-3xl flex-wrap justify-center gap-2">
+        <div
+          role="tablist"
+          aria-label="Gallery categories"
+          className="mx-auto mb-10 flex max-w-3xl flex-wrap justify-center gap-2"
+        >
           {FILTERS.map((f) => (
             <button
               key={f}
               type="button"
-              onClick={() => setFilter(f)}
-              aria-pressed={filter === f}
+              role="tab"
+              aria-selected={filter === f}
+              onClick={() => {
+                setFilter(f);
+                setActive(null);
+              }}
               className={[
-                "rounded-sm border px-4 py-2 text-[0.62rem] uppercase tracking-[0.2em] transition-colors",
+                "rounded-sm border px-4 py-2 text-[0.62rem] uppercase tracking-[0.2em] transition-all duration-300",
                 filter === f
                   ? "border-accent bg-accent text-accent-foreground"
                   : "border-accent/35 text-muted-foreground hover:border-accent hover:text-accent",
@@ -81,7 +95,7 @@ function Gallery() {
               key={`${p.alt}-${i}`}
               type="button"
               onClick={() => setActive(i)}
-              className="group block w-full break-inside-avoid overflow-hidden rounded-sm border border-accent/35 shadow-[var(--shadow-luxe)]"
+              className="group block w-full break-inside-avoid overflow-hidden rounded-sm border border-accent/35 shadow-[var(--shadow-luxe)] reveal-up"
               aria-label={`Open ${p.alt}`}
             >
               <img
