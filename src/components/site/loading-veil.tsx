@@ -30,8 +30,9 @@ export function LoadingVeil() {
       />
       <span className="relative font-script text-5xl shimmer-gold">{WEDDING.hashtag}</span>
       <span className="relative mt-4 text-[0.6rem] uppercase tracking-[0.4em] text-ivory/70">
-        Solemnization of Holy Matrimony
+        Our Forever Has Begun
       </span>
+
       <span className="sr-only">Loading</span>
     </div>
   );
