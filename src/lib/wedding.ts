@@ -7,7 +7,7 @@ export const WEDDING = {
   venue: "GIC Choba Satellite, Beside Helena Hotels, Before the Police Station",
   city: "Choba, Port Harcourt, Rivers State",
   // West Africa Time (UTC+1)
-  iso: "2026-07-29T10:00:00+01:00",
+  iso: "2026-08-29T10:00:00+01:00",
   verse: "For in the fullness of time, love blossomed into God's perfect plan.",
   phones: ["08130471871", "08133395447", "08100980650", "08101357112"],
   email: "nworgu@gmail.com",
