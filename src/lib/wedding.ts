@@ -16,14 +16,9 @@ export const WEDDING = {
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
   { to: "/our-story", label: "Our Story" },
-  { to: "/wedding-details", label: "Details" },
-  { to: "/programme", label: "Programme" },
+  { to: "/wedding-details", label: "Wedding Details" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/wedding-party", label: "Wedding Party" },
-  { to: "/dress-code", label: "Dress Code" },
   { to: "/gifts", label: "Gifts" },
-  { to: "/guest-information", label: "Guest Info" },
-  { to: "/messages", label: "Messages" },
-  { to: "/rsvp", label: "RSVP" },
   { to: "/contact", label: "Contact" },
 ] as const;
+
